@@ -1,0 +1,5 @@
+net.codjo.plugin.gui
+	-> net.codjo.agent
+	-> net.codjo.agent.test
+	-> net.codjo.plugin.common
+	-> net.codjo.test.common

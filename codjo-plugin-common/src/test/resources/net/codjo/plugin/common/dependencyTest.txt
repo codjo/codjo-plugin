@@ -1,0 +1,13 @@
+net.codjo.plugin.common
+	-> net.codjo.agent
+	-> net.codjo.agent.test
+	-> net.codjo.plugin.common.session
+	-> net.codjo.test.common
+	-> net.codjo.test.common.fixture
+	-> net.codjo.util.file
+	-> org.picocontainer
+	-> org.picocontainer.defaults
+
+net.codjo.plugin.common.session
+	-> net.codjo.agent
+	-> net.codjo.test.common

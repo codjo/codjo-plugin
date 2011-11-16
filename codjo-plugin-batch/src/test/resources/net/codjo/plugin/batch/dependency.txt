@@ -1,0 +1,3 @@
+net.codjo.plugin.batch
+	-> net.codjo.agent
+	-> net.codjo.plugin.common

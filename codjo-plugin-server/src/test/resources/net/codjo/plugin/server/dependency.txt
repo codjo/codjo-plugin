@@ -1,0 +1,6 @@
+net.codjo.plugin.server
+	-> net.codjo.agent
+	-> net.codjo.agent.protocol
+	-> net.codjo.plugin.common
+	-> org.apache.commons.httpclient
+	-> org.apache.commons.httpclient.methods

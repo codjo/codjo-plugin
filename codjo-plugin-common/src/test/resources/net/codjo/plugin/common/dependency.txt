@@ -1,0 +1,10 @@
+net.codjo.plugin.common
+	-> net.codjo.agent
+	-> net.codjo.plugin.common.session
+	-> net.codjo.logging
+	-> org.picocontainer
+	-> org.picocontainer.defaults
+
+net.codjo.plugin.common.session
+	-> net.codjo.agent
+	-> org.picocontainer

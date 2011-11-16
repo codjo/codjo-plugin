@@ -1,0 +1,8 @@
+net.codjo.plugin.server
+	-> net.codjo.agent
+	-> net.codjo.agent.test
+	-> net.codjo.plugin.common
+	-> net.codjo.test.common
+	-> net.codjo.test.common.fixture
+	-> org.mortbay.jetty
+	-> org.mortbay.jetty.servlet
