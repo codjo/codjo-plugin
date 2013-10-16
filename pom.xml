@@ -13,7 +13,7 @@
     </parent>
     <groupId>net.codjo.plugin</groupId>
     <artifactId>codjo-plugin</artifactId>
-    <version>1.40</version>
+    <version>1.41-SNAPSHOT</version>
     <dependencyManagement>
         <dependencies>
             <dependency>
