@@ -1,4 +1,7 @@
 package net.codjo.plugin.batch;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.security.Permission;
 import net.codjo.agent.ContainerFailureException;
 import net.codjo.agent.UserId;
 import net.codjo.agent.test.AgentContainerFixture;
@@ -7,9 +10,6 @@ import net.codjo.plugin.common.ApplicationPlugin;
 import net.codjo.plugin.common.ApplicationPluginMock;
 import net.codjo.plugin.common.CommandLineArguments;
 import net.codjo.test.common.LogString;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.security.Permission;
 import org.apache.log4j.Logger;
 import org.apache.log4j.SimpleLayout;
 import org.apache.log4j.WriterAppender;
@@ -45,8 +45,9 @@ public class BatchCoreTest extends ApplicationCoreTestCase<BatchCore> {
         }
         catch (SecurityException ex) {
             assertTrue(loggerMock.toString()
-                  .contains("net.codjo.agent.StartFailureException: Fichier de configuration est introuvable : "
-                            + "/path/do/not/exist/config.properties"));
+                             .contains(
+                                   "net.codjo.agent.StartFailureException: Fichier de configuration est introuvable : "
+                                   + "/path/do/not/exist/config.properties"));
         }
     }
 
@@ -207,7 +208,7 @@ public class BatchCoreTest extends ApplicationCoreTestCase<BatchCore> {
         BatchPluginMock plugin = new BatchPluginMock("import");
         applicationCore.addPlugin(plugin);
 
-        plugin.mockExecuteFailure(new TimeoutBatchException());
+        plugin.mockExecuteFailure(new TimeoutBatchException("", 123L));
         executeAndExit();
 
         log.assertContent("System.exit(" + BatchCore.EXIT_WITH_TIMEOUT + ")");

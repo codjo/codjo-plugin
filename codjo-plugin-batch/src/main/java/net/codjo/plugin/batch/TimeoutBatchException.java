@@ -8,7 +8,7 @@ package net.codjo.plugin.batch;
  *
  */
 public class TimeoutBatchException extends BatchException {
-    public TimeoutBatchException() {
-        super("timeout");
+    public TimeoutBatchException(String timeoutName, long timeoutValue) {
+        super(String.format("A %s timeout (%d ms) has happened", timeoutName, timeoutValue));
     }
 }
