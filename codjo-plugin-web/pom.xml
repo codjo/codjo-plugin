@@ -11,7 +11,7 @@
     <parent>
         <groupId>net.codjo.plugin</groupId>
         <artifactId>codjo-plugin</artifactId>
-        <version>1.40-SNAPSHOT</version>
+        <version>1.40</version>
     </parent>
     <dependencies />
 
